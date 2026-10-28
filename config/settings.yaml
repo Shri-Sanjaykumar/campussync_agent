@@ -1,0 +1,81 @@
+# CampusSync Agent - institution profile
+# To plug the agent into another college, copy this file, change the adapters
+# and the scheduling/attendance rules, and point the app at the new file:
+#   CAMPUSSYNC_CONFIG=config/settings.other_college.yaml streamlit run app.py
+
+institution:
+  name: "VIT Vellore (mock VTOP)"
+  timezone: "Asia/Kolkata"
+  mail_domains: [vit.ac.in, vitstudent.ac.in]   # mail from these is the college's own: never hidden as a promotion
+
+# Which connector to use for each outside system. Names come from campussync/adapters/registry.py
+adapters:
+  portal: mock_vtop        # timetables, attendance, academic calendar, exams
+  mail: gmail              # real Gmail of whoever runs the app (asked on first start); mock_mail = demo only
+  calendar: mock_calendar  # where booked meetings are written
+  notifier: telegram       # phone pings (needs TELEGRAM_BOT_TOKEN in .env; otherwise only logged)
+
+paths:
+  portal_data: data/mock/vtop.json
+  slot_grid: config/slot_grids/vit_ffcs.yaml
+  state: data/state/state.json
+  knowledge: data/knowledge
+  secrets: data/secrets        # Gmail sign-in files; never commit or share this folder
+
+scheduling:
+  working_days: [0, 1, 2, 3, 4, 5]   # Mon..Sat (meetings allowed on Saturday, no classes)
+  day_start: "08:00"
+  day_end: "19:00"
+  default_duration_min: 30
+  step_min: 10                 # slot starts are rounded to this
+  lead_time_min: 30            # never suggest a slot starting sooner than this from now
+  buffer_min: 0                # gap kept around classes/meetings
+  search_days: 7               # how far ahead to look for alternatives
+  max_suggestions: 3
+  allow_meetings_on_holidays: false
+  exam_prep_buffer_min: 60     # students are kept free this long before an exam
+  lunch_start: "13:00"
+  lunch_end: "14:00"
+  hold_hours: 4                # offered options stay reserved this long
+
+gmail:
+  redirect_uri: "http://localhost:8501/"   # must match where the app runs (change the port if you use another)
+  sync_max_messages: 30
+  sync_days: 14
+  skip_tabs: [promotions, social]   # Gmail tabs that never reach the app
+
+office_hours:
+  token_min: 10                # cabin hours are split into tokens of this length
+  max_tokens_per_session: 1
+
+attendance:
+  minimum_percent: 75
+  safety_margin_percent: 2     # skipping must keep attendance at least min + margin
+  exemption_cgpa: 9.0          # students at or above this CGPA are exempt from the minimum
+
+reminders:
+  offsets_min: [1440, 30]      # 1 day and 30 minutes before
+
+llm:
+  provider: deepseek
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-chat"
+  temperature: 0.2
+  timeout_s: 30
+  use_llm: auto                # auto = use DeepSeek when DEEPSEEK_API_KEY is set, off = never
+
+triage:
+  use_llm: auto                # sort mail with DeepSeek when the key is set; off = rules only
+  max_custom_categories: 12    # categories DeepSeek may create on top of the core ones
+  batch_size: 8                # mails per DeepSeek call
+
+ml:
+  use_intent_model: true       # small neural network that double-checks the intent of each mail
+
+rag:
+  backend: hybrid              # tfidf | dense | hybrid (keyword + dense vectors, merged)
+  embedding_model: "all-MiniLM-L6-v2"
+  top_k: 5
+
+mock:
+  seed: 7

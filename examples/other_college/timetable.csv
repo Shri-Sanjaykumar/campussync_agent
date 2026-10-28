@@ -1,0 +1,13 @@
+person_id,weekday,start,end,course_code,course_title,kind,venue
+T01,Mon,09:00,10:00,CS301,Operating Systems,theory,B101
+T01,Wed,09:00,10:00,CS301,Operating Systems,theory,B101
+T01,Thu,14:00,16:00,CS391,OS Lab,lab,Lab 2
+T02,Tue,11:00,12:00,CS305,Computer Networks,theory,B102
+T02,Fri,11:00,12:00,CS305,Computer Networks,theory,B102
+P01,Mon,09:00,10:00,CS301,Operating Systems,theory,B101
+P01,Tue,11:00,12:00,CS305,Computer Networks,theory,B102
+P01,Thu,14:00,16:00,CS391,OS Lab,lab,Lab 2
+P02,Mon,09:00,10:00,CS301,Operating Systems,theory,B101
+P02,Wed,09:00,10:00,CS301,Operating Systems,theory,B101
+P03,Tue,11:00,12:00,CS305,Computer Networks,theory,B102
+P03,Fri,11:00,12:00,CS305,Computer Networks,theory,B102

@@ -1,0 +1,16 @@
+{"user": "S003", "query": "when does Kavitha Raman sit in her cabin", "expect": "oh-F101"}
+{"user": "S003", "query": "what happens if my attendance goes under the limit", "expect": "kb-policies-1"}
+{"user": "S003", "query": "who is my project guide", "expect": "rel-S003"}
+{"user": "S003", "query": "deep learning test date", "expect": "ex-SWE3001"}
+{"user": "S003", "query": "which hours can meetings be booked", "expect": "kb-policies-2"}
+{"user": "S003", "query": "will people know why I am busy", "expect": "kb-policies-5"}
+{"user": "S003", "query": "do I get a reminder before a meeting", "expect": "kb-policies-6"}
+{"user": "S003", "query": "what if a professor cancels on the day", "expect": "kb-policies-7"}
+{"user": "S003", "query": "Arjun Menon timetable", "expect": "tt-F102"}
+{"user": "S003", "query": "how many classes have I attended in software metrics", "expect": "att-S003"}
+{"user": "S003", "query": "any institute holiday coming", "expect": "cal-"}
+{"user": "S003", "query": "Rahul Verma office hours", "expect": "oh-F104"}
+{"user": "S003", "query": "can I meet faculty on a holiday", "expect": "kb-policies-2"}
+{"user": "S003", "query": "meetings on exam day", "expect": "kb-policies-4"}
+{"user": "S003", "query": "java j2ee exam", "expect": "ex-SWE3006"}
+{"user": "S001", "query": "my club practice", "expect": "cm-"}

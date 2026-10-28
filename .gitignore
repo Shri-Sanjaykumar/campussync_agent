@@ -1,0 +1,40 @@
+# Environment variables and secrets (NEVER commit these)
+.env
+.env.*
+*.env
+!.env.example
+*.token
+token.json
+credentials.json
+client_secret*.json
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Application state, caches and secrets
+data/secrets/
+data/state/
+data/mock/vtop.json
+data/models/
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

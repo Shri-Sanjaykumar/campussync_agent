@@ -1,0 +1,46 @@
+# Same agent, different college: timetable comes from a CSV export instead of VTOP,
+# fixed hourly periods, no attendance data, 5-day week. Only this file and the data changed.
+institution:
+  name: "Example Engineering College (CSV export)"
+  timezone: "Asia/Kolkata"
+adapters:
+  portal: csv
+  mail: mock_mail
+  calendar: mock_calendar
+  notifier: telegram
+paths:
+  portal_data: examples/other_college
+  state: data/state/state_other_college.json
+  knowledge: data/knowledge
+scheduling:
+  working_days: [0, 1, 2, 3, 4]
+  day_start: "09:00"
+  day_end: "17:00"
+  default_duration_min: 30
+  step_min: 15
+  lead_time_min: 30
+  buffer_min: 0
+  search_days: 7
+  max_suggestions: 3
+  allow_meetings_on_holidays: false
+  exam_prep_buffer_min: 0
+  lunch_start: "12:30"
+  lunch_end: "13:30"
+attendance:
+  minimum_percent: 80
+  safety_margin_percent: 2
+  exemption_cgpa: null
+reminders:
+  offsets_min: [60]
+llm:
+  provider: deepseek
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-chat"
+  temperature: 0.2
+  timeout_s: 30
+  use_llm: auto
+ml:
+  use_intent_model: true
+rag:
+  backend: hybrid
+  top_k: 5

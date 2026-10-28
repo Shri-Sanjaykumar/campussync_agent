@@ -1,0 +1,21 @@
+{"subject": "Doubt", "body": "Hello sir, can I meet you on Friday at 2 to clear a doubt in backprop?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-16", "start": "14:00"}}
+{"subject": "x", "body": "mam can i come now to ur cabin", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request"}}
+{"subject": "Meeting", "body": "Kindly reschedule our Monday meeting to Tuesday 11 am.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "reschedule", "date": "2026-10-20", "start": "11:00"}}
+{"subject": "Re: options", "body": "2nd option works", "sent_at": "2026-10-15T07:30", "expect": {"intent": "option_choice", "option": 2}}
+{"subject": "Review prep", "body": "Ma'am, do you have 30 minutes free on 22nd October afternoon?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-22", "part_of_day": "afternoon", "duration_min": 30}}
+{"subject": "x", "body": "Not coming for tomorrow's discussion sir, sorry. Please cancel.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "cancel"}}
+{"subject": "Thanks", "body": "Thanks for clearing my doubt today ma'am.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "other"}}
+{"subject": "Free?", "body": "When would be a good time to show you my DA?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "availability_query"}}
+{"subject": "Project", "body": "Sir, our group would like to meet you on Monday between 3 and 4 pm.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-19", "start": "15:00", "end": "16:00"}}
+{"subject": "Urgent!!", "body": "Need to see you immediately about the hall ticket issue.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "urgent": true, "date": "2026-10-15"}}
+{"subject": "x", "body": "can we do it at 11 tmrw instead of 10", "sent_at": "2026-10-15T07:30", "expect": {"intent": "reschedule", "date": "2026-10-16", "start": "11:00"}}
+{"subject": "Report", "body": "I have mailed the final report. Please review it when you get time.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "other"}}
+{"subject": "Time", "body": "Sir is 10:30 on 19/10 okay for you?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-19", "start": "10:30"}}
+{"subject": "x", "body": "I'll go with the first option", "sent_at": "2026-10-15T07:30", "expect": {"intent": "option_choice", "option": 1}}
+{"subject": "Slot", "body": "Could you give me a 15 minute slot this Saturday morning?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-17", "part_of_day": "morning", "duration_min": 15}}
+{"subject": "Cancel", "body": "Please cancel our appointment, the issue got resolved.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "cancel"}}
+{"subject": "Availability", "body": "What's your availability on Wednesday?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "availability_query", "date": "2026-10-21"}}
+{"subject": "Move", "body": "Can we move tomorrow's meeting to the evening?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "reschedule", "date": "2026-10-16", "part_of_day": "evening"}}
+{"subject": "x", "body": "sir 5 mins today?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-15", "duration_min": 5}}
+{"subject": "Meet", "body": "May I meet you on the 26th at 9 am?", "sent_at": "2026-10-15T07:30", "expect": {"intent": "meeting_request", "date": "2026-10-26", "start": "09:00"}}
+{"subject": "Leave application", "body": "Respected Ma'am, I need leave on Monday as I have to go home for a family function.", "sent_at": "2026-10-15T07:30", "expect": {"intent": "leave_request", "date": "2026-10-19"}}

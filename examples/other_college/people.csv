@@ -1,0 +1,6 @@
+id,name,email,role,department,cgpa,guide_id,cabin
+T01,Dr. Farah Khan,farah.khan@college.mock,faculty,CSE,,,Block B 204
+T02,Prof. George Paul,george.paul@college.mock,faculty,CSE,,,Block B 210
+P01,Ankit Mehta,ankit.mehta@college.mock,student,CSE,8.1,T01,
+P02,Riya Sen,riya.sen@college.mock,student,CSE,9.2,T01,
+P03,Manoj Kumar,manoj.kumar@college.mock,student,CSE,7.6,T02,
